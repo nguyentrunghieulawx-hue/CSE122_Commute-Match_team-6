@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CommuteMatch - Quản lý người dùng">
+  <title>Quản lý người dùng | CommuteMatch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="admin-user-management.css">
+</head>
+<body data-page="admin-user-management">
+  <div id="app" aria-live="polite">
+    <div class="app-shell"><header class="topbar">
+      <a class="brand" href="../index/index.html"><span class="brand-mark">CM</span><span class="brand-name">CommuteMatch</span></a>
+      <nav class="main-nav" id="mainNav"><a class="nav-link " href="../admin-dashboard/admin-dashboard.html">Tổng quan</a><a class="nav-link active" href="../admin-user-management/admin-user-management.html">Người dùng</a><a class="nav-link " href="../admin-trip-management/admin-trip-management.html">Chuyến đi</a><a class="nav-link " href="../admin-report-center/admin-report-center.html">Báo cáo</a><a class="nav-link " href="../admin-platform-settings/admin-platform-settings.html">Cấu hình</a></nav>
+      <div class="top-actions">
+        <a class="icon-button" href="../notifications/notifications.html" title="Thông báo">3</a>
+        <a class="icon-button avatar" href="../profile/profile.html" title="Hồ sơ">HA</a>
+        <button class="icon-button menu-button" data-action="menu" aria-label="Mở menu">≡</button>
+      </div>
+    </header><main class="page-main"><div class="page-heading"><div><div class="eyebrow">QUẢN TRỊ VIÊN</div><h1>Quản lý người dùng</h1><p class="muted">Phân vai trò, theo dõi và xử lý trạng thái tài khoản.</p></div><button class="btn btn-primary" data-modal="userModal">Thêm người dùng</button></div>
+    <div class="card"><div class="form-grid" style="margin-bottom:18px"><div class="form-group "><label>Tìm tên, email hoặc mã</label><input class="form-control" type="search" value="" placeholder="Tìm tên, email hoặc mã"></div><div class="form-group "><label>Vai trò</label><select class="form-select"><option>Tất cả vai trò</option><option>Hành khách</option><option>Người chia sẻ xe</option><option>Điều phối viên</option></select></div></div><div class="table-wrap"><table><thead><tr><th>Mã</th><th>Người dùng</th><th>Vai trò</th><th>Trạng thái</th><th></th></tr></thead><tbody><tr><td>CM001</td><td><strong>Nguyễn Minh Anh</strong><div class="muted small">minhanh@example.com</div></td><td>Người chia sẻ xe</td><td><span class="badge ">Hoạt động</span></td><td><button class="btn btn-outline btn-sm" data-modal="userModal">Sửa</button> <button class="btn btn-danger btn-sm" data-action="save">Vô hiệu</button></td></tr><tr><td>CM002</td><td><strong>Phạm Bảo Ngọc</strong><div class="muted small">baongoc@example.com</div></td><td>Hành khách</td><td><span class="badge ">Hoạt động</span></td><td><button class="btn btn-outline btn-sm" data-modal="userModal">Sửa</button> <button class="btn btn-danger btn-sm" data-action="save">Vô hiệu</button></td></tr><tr><td>CM003</td><td><strong>Trần Đức Long</strong><div class="muted small">duclong@example.com</div></td><td>Cả hai vai trò</td><td><span class="badge ">Hoạt động</span></td><td><button class="btn btn-outline btn-sm" data-modal="userModal">Sửa</button> <button class="btn btn-danger btn-sm" data-action="save">Vô hiệu</button></td></tr><tr><td>CM004</td><td><strong>Đỗ Hoàng Nam</strong><div class="muted small">hoangnam@example.com</div></td><td>Hành khách</td><td><span class="badge red">Tạm khóa</span></td><td><button class="btn btn-outline btn-sm" data-modal="userModal">Sửa</button> <button class="btn btn-primary btn-sm" data-action="save">Kích hoạt</button></td></tr><tr><td>CM005</td><td><strong>Lê Thu Hà</strong><div class="muted small">thuha@example.com</div></td><td>Điều phối viên</td><td><span class="badge ">Hoạt động</span></td><td><button class="btn btn-outline btn-sm" data-modal="userModal">Sửa</button> <button class="btn btn-danger btn-sm" data-action="save">Vô hiệu</button></td></tr></tbody></table></div></div></main>
+    <div class="modal-backdrop" id="userModal"><div class="modal-box"><div class="modal-head"><h2>Thông tin người dùng</h2><button class="modal-close" data-close aria-label="Đóng">×</button></div><div class="form-grid"><div class="form-group "><label>Họ và tên</label><input class="form-control" type="text" value="Nguyễn Minh Anh" placeholder="Họ và tên"></div><div class="form-group "><label>Email</label><input class="form-control" type="email" value="minhanh@example.com" placeholder="Email"></div><div class="form-group "><label>Vai trò</label><select class="form-select"><option>Hành khách</option><option>Người chia sẻ xe</option><option>Cả hai vai trò</option><option>Điều phối viên</option></select></div><div class="form-group "><label>Trạng thái</label><select class="form-select"><option>Hoạt động</option><option>Tạm khóa</option></select></div></div><div class="list-actions" style="margin-top:20px"><button class="btn btn-outline" data-close>Hủy</button><button class="btn btn-primary" data-action="save">Lưu thay đổi</button></div></div></div></div>
+
+    <div class="toast" id="toast">Đã cập nhật thành công</div>
+  </div>
+  <script src="admin-user-management.js"></script>
+</body>
+</html>

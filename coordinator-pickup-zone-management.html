@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CommuteMatch - Quản lý điểm đón">
+  <title>Quản lý điểm đón | CommuteMatch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="coordinator-pickup-zone-management.css">
+</head>
+<body data-page="coordinator-pickup-zone-management">
+  <div id="app" aria-live="polite">
+    <div class="app-shell"><header class="topbar">
+      <a class="brand" href="../index/index.html"><span class="brand-mark">CM</span><span class="brand-name">CommuteMatch</span></a>
+      <nav class="main-nav" id="mainNav"><a class="nav-link " href="../coordinator-mobility-dashboard/coordinator-mobility-dashboard.html">Tổng quan</a><a class="nav-link " href="../coordinator-demand-heatmap/coordinator-demand-heatmap.html">Nhu cầu AI</a><a class="nav-link " href="../coordinator-report-center/coordinator-report-center.html">Báo cáo</a><a class="nav-link active" href="../coordinator-pickup-zone-management/coordinator-pickup-zone-management.html">Điểm đón</a></nav>
+      <div class="top-actions">
+        <a class="icon-button" href="../notifications/notifications.html" title="Thông báo">3</a>
+        <a class="icon-button avatar" href="../profile/profile.html" title="Hồ sơ">HA</a>
+        <button class="icon-button menu-button" data-action="menu" aria-label="Mở menu">≡</button>
+      </div>
+    </header><main class="page-main"><div class="page-heading"><div><div class="eyebrow">ĐIỀU PHỐI VIÊN</div><h1>Quản lý điểm đón</h1><p class="muted">Duy trì các điểm gặp rõ ràng, an toàn và thuận tuyến.</p></div><button class="btn btn-primary" data-modal="zoneModal">Thêm điểm đón</button></div>
+    <div class="card"><div class="search-bar" style="margin-bottom:18px"><input class="form-control" placeholder="Tìm tên hoặc khu vực..."><select class="form-select" style="max-width:220px"><option>Tất cả trạng thái</option><option>Hoạt động</option><option>Vô hiệu hóa</option></select></div><div class="table-wrap"><table><thead><tr><th>Tên điểm đón</th><th>Khu vực</th><th>Lượt dùng/tháng</th><th>Trạng thái</th><th>Thao tác</th></tr></thead><tbody><tr><td><strong>Cổng Big C Thăng Long</strong></td><td>Cầu Giấy</td><td>184</td><td><span class="badge ">Hoạt động</span></td><td><button class="btn btn-outline btn-sm" data-modal="zoneModal">Sửa</button> <button class="btn btn-danger btn-sm" data-action="save">Vô hiệu</button></td></tr><tr><td><strong>Bến xe Mỹ Đình - Cổng 2</strong></td><td>Nam Từ Liêm</td><td>126</td><td><span class="badge ">Hoạt động</span></td><td><button class="btn btn-outline btn-sm" data-modal="zoneModal">Sửa</button></td></tr><tr><td><strong>Ngõ 18 Trần Thái Tông</strong></td><td>Cầu Giấy</td><td>42</td><td><span class="badge gray">Tạm ẩn</span></td><td><button class="btn btn-primary btn-sm" data-action="save">Kích hoạt</button></td></tr></tbody></table></div></div></main>
+    <div class="modal-backdrop" id="zoneModal"><div class="modal-box"><div class="modal-head"><h2>Thông tin điểm đón</h2><button class="modal-close" data-close aria-label="Đóng">×</button></div><div class="form-grid"><div class="form-group "><label>Tên điểm đón</label><input class="form-control" type="text" value="Cổng Big C Thăng Long" placeholder="Tên điểm đón"></div><div class="form-group "><label>Khu vực</label><select class="form-select"><option>Cầu Giấy</option><option>Nam Từ Liêm</option><option>Hà Đông</option></select></div><div class="form-group "><label>Vĩ độ</label><input class="form-control" type="text" value="21.0074" placeholder="Vĩ độ"></div><div class="form-group "><label>Kinh độ</label><input class="form-control" type="text" value="105.7931" placeholder="Kinh độ"></div><div class="form-group full"><label>Mô tả nhận diện</label><textarea class="form-control">Khu vực cổng chính, có mái che và đủ chỗ dừng ngắn.</textarea></div></div><div class="list-actions" style="margin-top:20px"><button class="btn btn-outline" data-close>Hủy</button><button class="btn btn-primary" data-action="save">Lưu điểm đón</button></div></div></div></div>
+
+    <div class="toast" id="toast">Đã cập nhật thành công</div>
+  </div>
+  <script src="coordinator-pickup-zone-management.js"></script>
+</body>
+</html>
