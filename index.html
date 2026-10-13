@@ -1,11 +1,131 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=HIEU/index.html">
-  <title>CommuteMatch – đang chuyển hướng</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CommuteMatch - Trang chủ">
+    <title>Trang chủ | CommuteMatch</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-  <p>Đang chuyển tới trang chủ CommuteMatch… Nếu trình duyệt không tự chuyển, bấm <a href="HIEU/index.html">vào đây</a>.</p>
+
+<body data-trang="index">
+
+    <header class="cm-header sticky-top">
+        <nav class="navbar navbar-expand-lg py-2">
+            <div class="container">
+                <a class="navbar-brand cm-logo me-lg-3" href="index.html">
+                    <span class="cm-logo-icon"><i class="bi bi-car-front-fill"></i></span>
+                    <span class="cm-logo-text">Commute<b>Match</b></span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cmMenu" aria-label="Mở menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="cmMenu">
+                    <!-- JS vẽ menu theo vai trò đang đăng nhập -->
+                    <ul class="navbar-nav ms-lg-auto mb-3 mb-lg-0 gap-lg-1" id="cmNav"></ul>
+                    <div class="d-flex align-items-center gap-2 ms-lg-3">
+                        <a class="cm-icon-btn" href="https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/notifications.html" title="Thông báo">3</a>
+                        <a class="cm-icon-btn cm-avatar" href="https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/profile.html" title="Hồ sơ">HA</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cm-hero">
+        <div>
+            <span class="cm-eyebrow">Di chuyển thông minh · Gắn kết cộng đồng</span>
+            <h1>Đi cùng nhau,<br>nhẹ đường mỗi ngày.</h1>
+            <p>CommuteMatch kết nối người có cùng tuyến đường, gợi ý điểm gặp phù hợp bằng AI và giúp mỗi chuyến đi an toàn, tiết kiệm hơn.</p>
+
+            <div class="cm-hero-actions">
+                <a class="btn cm-btn cm-btn-light" href="register.html">
+                    <i class="bi bi-rocket-takeoff"></i> Bắt đầu miễn phí
+                </a>
+                <a class="btn cm-btn cm-btn-outline" href="login.html" style="border-color:#8fc8b4;color:#fff;background:transparent">
+          Đăng nhập <i class="bi bi-arrow-right"></i>
+        </a>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <div class="col-4 cm-hero-stat"><strong>2.480+</strong>
+                    <div class="cm-hero-note">người tham gia</div>
+                </div>
+                <div class="col-4 cm-hero-stat"><strong>1.260</strong>
+                    <div class="cm-hero-note">chuyến đã ghép</div>
+                </div>
+                <div class="col-4 cm-hero-stat"><strong>4,8/5</strong>
+                    <div class="cm-hero-note">điểm hài lòng</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cm-hero-card">
+            <div class="cm-hero-mini mb-2">Chuyến gợi ý gần bạn</div>
+            <div class="cm-route">
+                <span class="cm-route-dot"></span>
+                <div><strong>Cầu Giấy</strong>
+                    <div class="cm-hero-note">07:15 · Điểm đón cách 350m</div>
+                </div>
+            </div>
+            <div class="cm-route">
+                <span class="cm-route-dot cm-den"></span>
+                <div><strong>Khu CNC Hòa Lạc</strong>
+                    <div class="cm-hero-note">Dự kiến 08:05</div>
+                </div>
+            </div>
+            <div class="cm-route-total">
+                <span class="cm-hero-note"><i class="bi bi-stars"></i> AI phù hợp 96%</span>
+                <strong class="cm-price text-white">35.000đ</strong>
+            </div>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <article class="cm-card">
+                    <span class="cm-eyebrow">01</span>
+                    <h2 class="mt-2">Tìm đúng chuyến</h2>
+                    <p class="cm-subtitle mt-2 mb-0">Lọc theo tuyến, giờ đi, giá và mức phù hợp với lịch trình của bạn.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="cm-card">
+                    <span class="cm-eyebrow">02</span>
+                    <h2 class="mt-2">Gặp nhau thuận tiện</h2>
+                    <p class="cm-subtitle mt-2 mb-0">AI gợi ý điểm đón cân bằng quãng đường cho cả hai bên.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="cm-card">
+                    <span class="cm-eyebrow">03</span>
+                    <h2 class="mt-2">Đi an tâm hơn</h2>
+                    <p class="cm-subtitle mt-2 mb-0">Hồ sơ, đánh giá và quy trình báo cáo minh bạch cho cộng đồng.</p>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="cm-footer">
+        <div class="container py-4 text-center">
+            <span class="cm-logo-text">Commute<b>Match</b></span>
+            <p class="mb-0 mt-1">© 2026 CommuteMatch — Ghép chuyến đi chung cho cộng đồng.</p>
+        </div>
+    </footer>
+
+    <div class="cm-toast" id="cmToast">Đã cập nhật thành công</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/duong-dan.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
