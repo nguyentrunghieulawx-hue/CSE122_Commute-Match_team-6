@@ -1,24 +1,40 @@
-Script duyệt cả 3 thư mục và báo: trang thiếu css/js, HTML thiếu nhúng file,
-liên kết hỏng (kể cả liên kết chéo `../`), id mà JS cần nhưng HTML không có,
-và trang đích của các lời gọi điều hướng.
+# CommuteMatch – Thư mục thành viên DUC
 
-## Các nhánh (branch) trên GitHub
+Gồm các trang của điều phối viên (coordinator) và quản trị viên (admin).
 
-| Branch | Nội dung |
+## Cấu trúc
+
+```
+DUC/
+├── <ten-trang>.html   ← các trang đặt trực tiếp ở gốc thư mục
+├── css/
+│   └── <ten-trang>.css
+├── js/
+│   ├── duong-dan.js   ← bảng đường dẫn dùng chung giữa 3 thư mục
+│   └── <ten-trang>.js
+├── assets/            ← tài nguyên tĩnh (ảnh, font…)
+└── README.md
+```
+
+## Cách chạy
+
+- Khuyến nghị: chạy server tĩnh từ **gốc thư mục này (gốc branch)** (Live Server của VS Code
+  hoặc `npx http-server`) rồi mở `http://localhost:8080/admin-dashboard.html`.
+- Hoặc mở trực tiếp `admin-dashboard.html` bằng trình duyệt. Liên kết chéo sang trang của
+  thành viên khác là đường dẫn tuyệt đối tới bản GitHub Pages của nhánh `main`,
+  nên cần repo đã bật Pages để nhảy chéo giữa các branch.
+
+## Danh sách trang
+
+| File | Chức năng |
 |---|---|
-| `main` | Bản tích hợp đầy đủ: 3 thư mục `HIEU/`, `DAI/`, `DUC/` + `tools/`. Đây là nhánh dùng để bật GitHub Pages. |
-| `HIEU` | Project riêng của HIEU đặt tại gốc branch (html + `css/` + `js/` + `assets/` + `README.md`). |
-| `DAI` | Project riêng của DAI, cấu trúc tương tự. |
-| `DUC` | Project riêng của DUC, cấu trúc tương tự. |
-
-Trên 3 branch thành viên, liên kết nội bộ giữ nguyên dạng tương đối nên chạy
-được khi mở local; liên kết chéo sang trang của thành viên khác là đường dẫn
-tuyệt đối tới bản triển khai GitHub Pages của nhánh `main`, nên vẫn nhảy đúng
-trang đích khi xem từng branch riêng lẻ.
-
-## GitHub Pages
-
-1. Vào repo → **Settings → Pages**.
-2. Mục *Build and deployment*: Source = **Deploy from a branch**, Branch = **`main`**, Folder = **`/ (root)`** → Save.
-3. Link chạy toàn bộ website (tự chuyển hướng vào `HIEU/index.html`):
-   `https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/`
+| `coordinator-mobility-dashboard.html` | Tổng quan điều phối |
+| `coordinator-demand-heatmap.html` | Bản đồ nhiệt nhu cầu |
+| `coordinator-pickup-zone-management.html` | Quản lý điểm đón |
+| `coordinator-report-center.html` | Trung tâm báo cáo (điều phối) |
+| `coordinator-trip-detail.html` | Chi tiết chuyến (góc nhìn điều phối) |
+| `admin-dashboard.html` | Tổng quan quản trị |
+| `admin-user-management.html` | Quản lý người dùng |
+| `admin-trip-management.html` | Quản lý chuyến đi |
+| `admin-report-center.html` | Trung tâm báo cáo (quản trị) |
+| `admin-platform-settings.html` | Cấu hình nền tảng |
