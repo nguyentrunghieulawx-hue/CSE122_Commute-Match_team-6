@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CommuteMatch - Kết quả phù hợp">
+  <title>Kết quả phù hợp | CommuteMatch</title>
+  <link rel="stylesheet" href="css/rider-match-results.css">
+</head>
+
+<body data-page="rider-match-results">
+
+  <div class="dai-shell">
+
+    <!-- ===== Thanh trên cùng ===== -->
+    <header class="dai-bar">
+      <a class="dai-brand" href="../HIEU/index.html">
+        <span class="dai-brand-mark">CM</span>
+        <span class="dai-brand-name">CommuteMatch</span>
+      </a>
+
+      <nav class="dai-nav" id="mainNav">
+        <a class="nav-link" href="rider-trip-search.html">Tìm chuyến</a>
+        <a class="nav-link active" href="rider-match-results.html">Gợi ý phù hợp</a>
+        <a class="nav-link" href="rider-my-trips.html">Chuyến của tôi</a>
+      </nav>
+
+      <div class="dai-tools">
+        <a class="dai-tool" href="notifications.html" title="Thông báo">3</a>
+        <a class="dai-tool dai-avatar" href="profile.html" title="Hồ sơ">HA</a>
+        <button class="dai-tool dai-menu" data-action="menu" aria-label="Mở menu">≡</button>
+      </div>
+    </header>
+
+    <main class="dai-main">
+
+      <!-- ===== Tiêu đề trang ===== -->
+      <div class="dai-head">
+        <div>
+          <div class="dai-kicker">AI Matching</div>
+          <h1>3 chuyến phù hợp</h1>
+          <p class="dai-note">Cầu Giấy → Hòa Lạc · Thứ Hai, 05/10</p>
+        </div>
+        <a class="dai-btn dai-btn-line" href="rider-trip-search.html">Sửa tìm kiếm</a>
+      </div>
+
+      <!-- ===== Bộ lọc nhanh ===== -->
+      <section class="dai-panel" style="margin-bottom:18px">
+        <form class="dai-form dai-bo-loc" onsubmit="return false">
+          <div class="dai-field">
+            <label for="mrKhungGio">Khung giờ</label>
+            <select class="dai-select" id="mrKhungGio">
+              <option>06:30–08:30</option>
+              <option>07:00–08:00</option>
+            </select>
+          </div>
+          <div class="dai-field">
+            <label for="mrGia">Mức giá</label>
+            <select class="dai-select" id="mrGia">
+              <option>Tất cả</option>
+              <option>Dưới 35.000đ</option>
+              <option>Dưới 50.000đ</option>
+            </select>
+          </div>
+          <div class="dai-field">
+            <label for="mrDiemDon">Điểm đón</label>
+            <select class="dai-select" id="mrDiemDon">
+              <option>Trong 500m</option>
+              <option>Trong 1km</option>
+            </select>
+          </div>
+          <div class="dai-field">
+            <label for="mrSapXep">Sắp xếp</label>
+            <select class="dai-select" id="mrSapXep">
+              <option>Phù hợp nhất</option>
+              <option>Giá thấp nhất</option>
+              <option>Khởi hành sớm nhất</option>
+            </select>
+          </div>
+        </form>
+      </section>
+
+      <!-- ===== Danh sách chuyến gợi ý ===== -->
+      <div class="dai-list-chuyen">
+
+        <article class="dai-trip">
+          <div class="dai-col-main">
+            <div class="dai-person">
+              <span class="dai-face amber">MA</span>
+              <div class="dai-item-body">
+                <strong>Nguyễn Minh Anh</strong>
+                <p>Đánh giá 4.9/5</p>
+              </div>
+            </div>
+            <div class="dai-route">
+              <span>Cầu Giấy</span>
+              <span class="dai-mui-ten">→</span>
+              <span>Hòa Lạc</span>
+            </div>
+            <div class="dai-meta">
+              <span>07:15, Thứ Hai 05/10</span>
+              <span>2 chỗ trống</span>
+              <span>Mã CM-2408</span>
+            </div>
+          </div>
+          <div class="dai-side">
+            <span class="dai-score">AI phù hợp 96%</span>
+            <span class="dai-price">35.000đ</span>
+            <div class="dai-item-act">
+              <a class="dai-btn dai-btn-line dai-btn-sm" href="rider-trip-detail.html">Chi tiết</a>
+              <button class="dai-btn dai-btn-main dai-btn-sm" data-modal="joinModal">Tham gia</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dai-trip">
+          <div class="dai-col-main">
+            <div class="dai-person">
+              <span class="dai-face">ĐL</span>
+              <div class="dai-item-body">
+                <strong>Trần Đức Long</strong>
+                <p>Đánh giá 4.8/5</p>
+              </div>
+            </div>
+            <div class="dai-route">
+              <span>Hà Đông</span>
+              <span class="dai-mui-ten">→</span>
+              <span>ĐHQG Hà Nội</span>
+            </div>
+            <div class="dai-meta">
+              <span>07:30, Thứ Hai 05/10</span>
+              <span>1 chỗ trống</span>
+              <span>Mã CM-2412</span>
+            </div>
+          </div>
+          <div class="dai-side">
+            <span class="dai-score">AI phù hợp 91%</span>
+            <span class="dai-price">30.000đ</span>
+            <div class="dai-item-act">
+              <a class="dai-btn dai-btn-line dai-btn-sm" href="rider-trip-detail.html">Chi tiết</a>
+              <button class="dai-btn dai-btn-main dai-btn-sm" data-modal="joinModal">Tham gia</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dai-trip">
+          <div class="dai-col-main">
+            <div class="dai-person">
+              <span class="dai-face lime">TH</span>
+              <div class="dai-item-body">
+                <strong>Lê Thu Hà</strong>
+                <p>Đánh giá 4.7/5</p>
+              </div>
+            </div>
+            <div class="dai-route">
+              <span>Mỹ Đình</span>
+              <span class="dai-mui-ten">→</span>
+              <span>Khu CNC Hòa Lạc</span>
+            </div>
+            <div class="dai-meta">
+              <span>08:00, Thứ Hai 05/10</span>
+              <span>0 chỗ trống</span>
+              <span>Mã CM-2426</span>
+            </div>
+          </div>
+          <div class="dai-side">
+            <span class="dai-score">AI phù hợp 87%</span>
+            <span class="dai-price">40.000đ</span>
+            <div class="dai-item-act">
+              <a class="dai-btn dai-btn-line dai-btn-sm" href="rider-trip-detail.html">Chi tiết</a>
+              <button class="dai-btn dai-btn-main dai-btn-sm" data-modal="joinModal" disabled>Đã đầy</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- ===== Hộp thoại gửi yêu cầu tham gia ===== -->
+    <div class="modal-backdrop" id="joinModal">
+      <div class="modal-box">
+        <div class="modal-head">
+          <h2>Gửi yêu cầu tham gia</h2>
+          <button class="modal-close" data-close aria-label="Đóng">×</button>
+        </div>
+
+        <form class="dai-form" onsubmit="return false">
+          <div class="dai-field">
+            <label for="mrDon">Điểm đón</label>
+            <select class="dai-select" id="mrDon">
+              <option>Cổng Big C Thăng Long · 350m</option>
+              <option>Ngõ 18 Trần Thái Tông · 620m</option>
+            </select>
+          </div>
+          <div class="dai-field" style="flex:1 1 100%">
+            <label for="mrLoiNhan">Lời nhắn</label>
+            <input class="dai-input" id="mrLoiNhan" type="text" value="Mình sẽ có mặt trước 5 phút" placeholder="Lời nhắn">
+          </div>
+        </form>
+
+        <div class="dai-callout" style="margin-top:16px">Tài xế sẽ phản hồi trong mục Chuyến của tôi.</div>
+
+        <div class="dai-btn-row">
+          <button class="dai-btn dai-btn-line" data-close>Để sau</button>
+          <button class="dai-btn dai-btn-main" data-action="confirm-join">Gửi yêu cầu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Đã cập nhật thành công</div>
+
+  <script src="js/duong-dan.js"></script>
+  <script src="js/rider-match-results.js"></script>
+</body>
+</html>
+

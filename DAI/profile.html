@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CommuteMatch - Hồ sơ">
+  <title>Hồ sơ | CommuteMatch</title>
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body data-page="profile">
+
+  <div class="dai-shell">
+
+    <!-- ===== Thanh trên cùng ===== -->
+    <header class="dai-bar">
+      <a class="dai-brand" href="../HIEU/index.html">
+        <span class="dai-brand-mark">CM</span>
+        <span class="dai-brand-name">CommuteMatch</span>
+      </a>
+
+      <nav class="dai-nav" id="mainNav">
+        <a class="nav-link" href="rider-trip-search.html">Tìm chuyến</a>
+        <a class="nav-link" href="rider-match-results.html">Gợi ý phù hợp</a>
+        <a class="nav-link" href="rider-my-trips.html">Chuyến của tôi</a>
+      </nav>
+
+      <div class="dai-tools">
+        <a class="dai-tool" href="notifications.html" title="Thông báo">3</a>
+        <a class="dai-tool dai-avatar" href="profile.html" title="Hồ sơ">HA</a>
+        <button class="dai-tool dai-menu" data-action="menu" aria-label="Mở menu">≡</button>
+      </div>
+    </header>
+
+    <main class="dai-main">
+
+      <!-- ===== Tiêu đề trang ===== -->
+      <div class="dai-head">
+        <div>
+          <div class="dai-kicker">Tài khoản</div>
+          <h1>Hồ sơ cá nhân</h1>
+          <p class="dai-note">Quản lý thông tin, vai trò và uy tín cộng đồng.</p>
+        </div>
+      </div>
+
+      <div class="dai-flex">
+
+        <!-- ===== Cột chính: thông tin cá nhân ===== -->
+        <div class="dai-col-main">
+          <section class="dai-panel">
+            <div class="dai-panel-head">
+              <h2>Thông tin cá nhân</h2>
+              <button class="dai-btn dai-btn-line dai-btn-sm" data-action="save">Sửa hồ sơ</button>
+            </div>
+
+            <div class="dai-person" style="margin-bottom:20px">
+              <span class="dai-face amber to">HA</span>
+              <div>
+                <div class="dai-profile-name">Hoàng Anh</div>
+                <p class="dai-note">hanhkhach@example.com · Tham gia 04/2025</p>
+              </div>
+            </div>
+
+            <form class="dai-form" onsubmit="return false">
+              <div class="dai-field">
+                <label for="pfHoTen">Họ và tên</label>
+                <input class="dai-input" id="pfHoTen" type="text" value="Hoàng Anh" placeholder="Họ và tên">
+              </div>
+              <div class="dai-field">
+                <label for="pfDienThoai">Số điện thoại</label>
+                <input class="dai-input" id="pfDienThoai" type="tel" value="0912 345 678" placeholder="Số điện thoại">
+              </div>
+              <div class="dai-field">
+                <label for="pfEmail">Email</label>
+                <input class="dai-input" id="pfEmail" type="email" value="hanhkhach@example.com" placeholder="Email">
+              </div>
+              <div class="dai-field">
+                <label for="pfKhuVuc">Khu vực</label>
+                <input class="dai-input" id="pfKhuVuc" type="text" value="Cầu Giấy, Hà Nội" placeholder="Khu vực">
+              </div>
+            </form>
+
+            <div class="dai-btn-row">
+              <button class="dai-btn dai-btn-main" data-action="save">Lưu thông tin</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- ===== Cột phụ: vai trò, uy tín, cài đặt ===== -->
+        <div class="dai-col-side dai-stack">
+          <section class="dai-panel">
+            <h2>Vai trò đang dùng</h2>
+            <p class="dai-note">Bạn có thể đổi giữa hai vai trò đã đăng ký.</p>
+            <div class="dai-picks">
+              <button class="role-option selected" data-switch="rider">Hành khách</button>
+              <button class="role-option" data-switch="driver">Người chia sẻ xe</button>
+            </div>
+          </section>
+
+          <section class="dai-panel">
+            <div class="dai-stat">
+              <span>Uy tín</span>
+              <strong>4,8/5</strong>
+              <em>28 đánh giá</em>
+            </div>
+            <p class="dai-note" style="margin-top:12px">96% người đi cùng muốn tiếp tục đồng hành.</p>
+          </section>
+
+          <a class="dai-btn dai-btn-line" href="settings.html">Mở cài đặt</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">Đã cập nhật thành công</div>
+
+  <script src="js/duong-dan.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
