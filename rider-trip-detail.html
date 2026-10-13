@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CommuteMatch - Chi tiết chuyến">
+  <title>Chi tiết chuyến | CommuteMatch</title>
+  <link rel="stylesheet" href="css/rider-trip-detail.css">
+</head>
+
+<body data-page="rider-trip-detail">
+
+  <div class="dai-shell">
+
+    <!-- ===== Thanh trên cùng ===== -->
+    <header class="dai-bar">
+      <a class="dai-brand" href="index.html">
+        <span class="dai-brand-mark">CM</span>
+        <span class="dai-brand-name">CommuteMatch</span>
+      </a>
+
+      <nav class="dai-nav" id="mainNav">
+        <a class="nav-link" href="rider-trip-search.html">Tìm chuyến</a>
+        <a class="nav-link" href="rider-match-results.html">Gợi ý phù hợp</a>
+        <a class="nav-link" href="rider-my-trips.html">Chuyến của tôi</a>
+      </nav>
+
+      <div class="dai-tools">
+        <a class="dai-tool" href="notifications.html" title="Thông báo">3</a>
+        <a class="dai-tool dai-avatar" href="profile.html" title="Hồ sơ">HA</a>
+        <button class="dai-tool dai-menu" data-action="menu" aria-label="Mở menu">≡</button>
+      </div>
+    </header>
+
+    <main class="dai-main">
+
+      <!-- ===== Tiêu đề trang ===== -->
+      <div class="dai-head">
+        <div>
+          <div class="dai-kicker">Chi tiết chuyến</div>
+          <h1>Cầu Giấy → Hòa Lạc</h1>
+          <p class="dai-note">Mã chuyến CM-2408 · Thứ Hai, 05/10</p>
+        </div>
+        <span class="dai-score">AI phù hợp 96%</span>
+      </div>
+
+      <div class="dai-flex">
+
+        <!-- ===== Cột chính ===== -->
+        <div class="dai-col-main dai-stack">
+
+          <section class="dai-panel">
+            <div class="dai-map">
+              <span class="dai-pin dai-pin-a">A</span>
+              <span class="dai-pin dai-pin-b">B</span>
+            </div>
+            <div class="dai-mini">
+              <div><span>Khởi hành</span><strong>07:15</strong></div>
+              <div><span>Dự kiến đến</span><strong>08:05</strong></div>
+              <div><span>Còn trống</span><strong>2 chỗ</strong></div>
+            </div>
+          </section>
+
+          <section class="dai-panel">
+            <div class="dai-panel-head">
+              <h2>Điểm đón AI đề xuất</h2>
+              <span class="dai-tag">Tiện nhất</span>
+            </div>
+            <div class="dai-don">
+              <strong>Cổng Big C Thăng Long</strong>
+              <p class="dai-note">Cách bạn 350m · Tài xế chỉ lệch tuyến 2 phút · Khu vực có mái che</p>
+            </div>
+            <div class="dai-btn-row">
+              <button class="dai-btn dai-btn-line">Chọn điểm khác</button>
+              <button class="dai-btn dai-btn-main" data-modal="joinModal">Gửi yêu cầu</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- ===== Cột phụ ===== -->
+        <div class="dai-col-side dai-stack">
+          <section class="dai-panel">
+            <div class="dai-person">
+              <span class="dai-face amber">MA</span>
+              <div class="dai-item-body">
+                <strong>Nguyễn Minh Anh</strong>
+                <p>Tài xế · 4,9/5 · 126 chuyến</p>
+              </div>
+            </div>
+            <hr class="dai-hr">
+            <p style="margin:0">Honda City · 30G-123.45</p>
+            <p class="dai-note">Đã xác minh giấy phép và phương tiện.</p>
+          </section>
+
+          <section class="dai-panel">
+            <div class="dai-panel-head">
+              <h2>Chi phí</h2>
+              <span class="dai-price">35.000đ</span>
+            </div>
+            <p class="dai-note">Chia sẻ chi phí nhiên liệu, không phải dịch vụ vận tải.</p>
+          </section>
+
+          <button class="dai-btn dai-btn-bad" data-modal="reportModal">Báo cáo chuyến</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== Hộp thoại xác nhận tham gia ===== -->
+    <div class="modal-backdrop" id="joinModal">
+      <div class="modal-box">
+        <div class="modal-head">
+          <h2>Xác nhận tham gia</h2>
+          <button class="modal-close" data-close aria-label="Đóng">×</button>
+        </div>
+        <p>Gửi yêu cầu tới <strong>Nguyễn Minh Anh</strong> với điểm đón <strong>Cổng Big C Thăng Long</strong>?</p>
+        <div class="dai-btn-row">
+          <button class="dai-btn dai-btn-line" data-close>Hủy</button>
+          <button class="dai-btn dai-btn-main" data-action="confirm-join">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Hộp thoại báo cáo chuyến ===== -->
+    <div class="modal-backdrop" id="reportModal">
+      <div class="modal-box">
+        <div class="modal-head">
+          <h2>Báo cáo chuyến</h2>
+          <button class="modal-close" data-close aria-label="Đóng">×</button>
+        </div>
+        <div class="dai-field">
+          <label for="tdLyDo">Lý do</label>
+          <select class="dai-select" id="tdLyDo">
+            <option>Thông tin không chính xác</option>
+            <option>Điểm đón không an toàn</option>
+            <option>Hành vi không phù hợp</option>
+          </select>
+        </div>
+        <div class="dai-field" style="margin-top:14px">
+          <label for="tdMoTa">Mô tả</label>
+          <textarea class="dai-area" id="tdMoTa" placeholder="Mô tả vấn đề..."></textarea>
+        </div>
+        <div class="dai-btn-row">
+          <button class="dai-btn dai-btn-line" data-close>Hủy</button>
+          <button class="dai-btn dai-btn-bad" data-action="save">Gửi báo cáo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Đã cập nhật thành công</div>
+
+  <script src="js/rider-trip-detail.js"></script>
+</body>
+</html>
+
