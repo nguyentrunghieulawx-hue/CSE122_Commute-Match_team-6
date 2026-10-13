@@ -1,24 +1,39 @@
-Script duyệt cả 3 thư mục và báo: trang thiếu css/js, HTML thiếu nhúng file,
-liên kết hỏng (kể cả liên kết chéo `../`), id mà JS cần nhưng HTML không có,
-và trang đích của các lời gọi điều hướng.
+# CommuteMatch – Thư mục thành viên DAI
 
-## Các nhánh (branch) trên GitHub
+Gồm các trang của hành khách (tìm chuyến, kết quả ghép, chuyến của tôi, chi tiết chuyến) và các trang hệ thống (403, 404, thông báo, hồ sơ, cài đặt).
 
-| Branch | Nội dung |
+## Cấu trúc
+
+```
+DAI/
+├── <ten-trang>.html   ← các trang đặt trực tiếp ở gốc thư mục
+├── css/
+│   └── <ten-trang>.css
+├── js/
+│   ├── duong-dan.js   ← bảng đường dẫn dùng chung giữa 3 thư mục
+│   └── <ten-trang>.js
+├── assets/            ← tài nguyên tĩnh (ảnh, font…)
+└── README.md
+```
+
+## Cách chạy
+
+- Khuyến nghị: chạy server tĩnh từ **gốc thư mục này (gốc branch)** (Live Server của VS Code
+  hoặc `npx http-server`) rồi mở `http://localhost:8080/rider-trip-search.html`.
+- Hoặc mở trực tiếp `rider-trip-search.html` bằng trình duyệt. Liên kết chéo sang trang của
+  thành viên khác là đường dẫn tuyệt đối tới bản GitHub Pages của nhánh `main`,
+  nên cần repo đã bật Pages để nhảy chéo giữa các branch.
+
+## Danh sách trang
+
+| File | Chức năng |
 |---|---|
-| `main` | Bản tích hợp đầy đủ: 3 thư mục `HIEU/`, `DAI/`, `DUC/` + `tools/`. Đây là nhánh dùng để bật GitHub Pages. |
-| `HIEU` | Project riêng của HIEU đặt tại gốc branch (html + `css/` + `js/` + `assets/` + `README.md`). |
-| `DAI` | Project riêng của DAI, cấu trúc tương tự. |
-| `DUC` | Project riêng của DUC, cấu trúc tương tự. |
-
-Trên 3 branch thành viên, liên kết nội bộ giữ nguyên dạng tương đối nên chạy
-được khi mở local; liên kết chéo sang trang của thành viên khác là đường dẫn
-tuyệt đối tới bản triển khai GitHub Pages của nhánh `main`, nên vẫn nhảy đúng
-trang đích khi xem từng branch riêng lẻ.
-
-## GitHub Pages
-
-1. Vào repo → **Settings → Pages**.
-2. Mục *Build and deployment*: Source = **Deploy from a branch**, Branch = **`main`**, Folder = **`/ (root)`** → Save.
-3. Link chạy toàn bộ website (tự chuyển hướng vào `HIEU/index.html`):
-   `https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/`
+| `rider-trip-search.html` | Tìm chuyến đi phù hợp |
+| `rider-match-results.html` | Kết quả ghép chuyến |
+| `rider-my-trips.html` | Danh sách chuyến của hành khách |
+| `rider-trip-detail.html` | Chi tiết chuyến (góc nhìn hành khách) |
+| `403.html` | Lỗi 403 – không có quyền truy cập |
+| `404.html` | Lỗi 404 – không tìm thấy trang |
+| `notifications.html` | Trung tâm thông báo |
+| `profile.html` | Hồ sơ cá nhân, đổi vai trò |
+| `settings.html` | Cài đặt tài khoản |
