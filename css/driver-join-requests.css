@@ -1,9 +1,3 @@
-/* =====================================================
-   CommuteMatch — phần CSS viết thêm của HIEU
-   Bootstrap 5 đã lo: lưới (row/col), form, bảng, modal,
-   navbar. File này chỉ viết những gì Bootstrap chưa có.
-   ===================================================== */
-
 :root {
     --blue: #176B57;
     --blue-dark: #0D3F34;
@@ -31,6 +25,7 @@ h1 {
 a {
     text-decoration: none;
 }
+
 
 /* ======= THANH TRÊN CÙNG ======= */
 
@@ -112,6 +107,7 @@ a {
     color: #fff;
 }
 
+
 /* ======= NÚT ======= */
 
 .cm-btn {
@@ -167,6 +163,7 @@ a {
     font-size: 14px;
 }
 
+
 /* ======= TIÊU ĐỀ TRANG ======= */
 
 .cm-page-head {
@@ -205,6 +202,7 @@ a {
     margin: 0;
 }
 
+
 /* ======= THẺ TRẮNG ======= */
 
 .cm-card {
@@ -225,6 +223,7 @@ a {
     margin-bottom: 16px;
 }
 
+
 /* ======= NHÃN TRẠNG THÁI ======= */
 
 .cm-badge {
@@ -237,6 +236,7 @@ a {
     font-size: 12.5px;
     font-weight: 700;
 }
+
 
 /* ======= DẢI TAB ======= */
 
@@ -266,6 +266,7 @@ a {
     color: var(--blue);
     box-shadow: 0 3px 12px rgba(13, 47, 38, .08);
 }
+
 
 /* ======= DANH SÁCH DẠNG HÀNG ======= */
 
@@ -299,6 +300,7 @@ a {
     background: var(--orange);
 }
 
+
 /* ======= GIÁ TIỀN VÀ ĐIỂM AI ======= */
 
 .cm-ai {
@@ -312,6 +314,7 @@ a {
     font-size: 12.5px;
     font-weight: 700;
 }
+
 
 /* ======= THÔNG BÁO NHỎ GÓC MÀN HÌNH ======= */
 
@@ -336,6 +339,7 @@ a {
     opacity: 1;
 }
 
+
 /* ======= CHÂN TRANG ======= */
 
 .cm-footer {
@@ -346,6 +350,7 @@ a {
     margin-top: 40px;
 }
 
+
 /* ======= MÀN HÌNH NHỎ ======= */
 
 @media (max-width: 575.98px) {
@@ -353,23 +358,20 @@ a {
         padding: 18px 15px;
         border-radius: 16px;
     }
-
     .cm-actions {
         width: 100%;
         justify-content: flex-start;
     }
-
     .cm-page-head {
         align-items: flex-start;
     }
-
     .cm-toast {
         left: 16px;
         right: 16px;
         max-width: none;
     }
-
 }
+
 
 /* Trang yêu cầu tham gia: cụm nút ngăn với nội dung */
 

@@ -51,7 +51,7 @@
             <div>
                 <span class="cm-eyebrow">Người chia sẻ xe</span>
                 <h1 class="cm-title">Yêu cầu tham gia</h1>
-                <p class="cm-subtitle">Duyệt hành khách vào chuyến CM-2408.</p>
+                <p class="cm-subtitle" id="phuDe">Duyệt hành khách vào chuyến CM-2408.</p>
             </div>
             <a class="btn cm-btn cm-btn-outline" href="driver-trip-detail.html">
                 <i class="bi bi-map"></i> Xem chuyến
@@ -60,13 +60,13 @@
 
         <!-- ===== Dải lọc theo trạng thái ===== -->
         <div class="cm-tabs" id="nhomTab">
-            <button class="cm-tab active" type="button">Đang chờ 2</button>
-            <button class="cm-tab" type="button">Đã duyệt 2</button>
-            <button class="cm-tab" type="button">Đã từ chối 1</button>
+            <button class="cm-tab active" type="button" data-loc="pending">Đang chờ 2</button>
+            <button class="cm-tab" type="button" data-loc="accepted">Đã duyệt 2</button>
+            <button class="cm-tab" type="button" data-loc="rejected">Đã từ chối 1</button>
         </div>
 
-        <!-- ===== Danh sách yêu cầu ===== -->
-        <div class="row g-3">
+        <!-- ===== Danh sách yêu cầu: driver-join-requests.js lấy từ MockApi và dựng lại ===== -->
+        <div class="row g-3" id="dsYeuCau">
             <div class="col-12">
                 <article class="cm-card cm-yeu-cau">
                     <div class="cm-card-head">
@@ -126,6 +126,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/duong-dan.js"></script>
+    <script src="js/mock-api.js"></script>
     <script src="js/driver-join-requests.js"></script>
     <script src="js/theme.js"></script>
 </body>

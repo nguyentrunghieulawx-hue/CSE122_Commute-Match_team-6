@@ -246,28 +246,43 @@ document.addEventListener("DOMContentLoaded", function() {
         nutDangChuyen.disabled = true;
         datTrangThai("Đang đăng chuyến...");
 
-        // Giả lập gửi dữ liệu lên máy chủ trong 800ms
-        setTimeout(function() {
-            var ghe = Number(soGhe.value);
-            var gia = Number(giaMoiGhe.value);
+        /* Gửi chuyến mới lên MockApi, tài xế là người đang đăng nhập */
+        MockApi.taoChuyen({
+                taiXeId: MockApi.layPhien("driver").id,
+                diemDi: diemDi.value,
+                diemDen: diemDen.value,
+                ngayKhoiHanh: ngayDi.value,
+                gioKhoiHanh: gioDi.value,
+                tongSoGhe: soGhe.value,
+                giaMoiGhe: giaMoiGhe.value,
+                ghiChu: ghiChu.value
+            })
+            .then(function(chuyen) {
+                noiDungThanhCong.textContent =
+                    "Chuyến " + chuyen.ma + ": " + chuyen.diemDi + " → " + chuyen.diemDen +
+                    " khởi hành " + ngayDep(chuyen.ngayKhoiHanh) + " lúc " + chuyen.gioKhoiHanh +
+                    " đã được đăng. Dự kiến thu về " + formatTien(chuyen.tongSoGhe * chuyen.giaMoiGhe) +
+                    " cho " + chuyen.tongSoGhe + " ghế. Xem trong mục Lịch chuyến.";
 
-            noiDungThanhCong.textContent =
-                "Chuyến " + diemDi.value.trim() + " → " + diemDen.value.trim() +
-                " khởi hành " + ngayDep(ngayDi.value) + " lúc " + gioDi.value +
-                " đã được đăng. Dự kiến thu về " + formatTien(ghe * gia) + " cho " + ghe + " ghế.";
+                hopThanhCong.classList.remove("d-none");
+                datTrangThai("");
+                hienThongBao("Đã đăng chuyến thành công");
+                localStorage.removeItem("cm_draft_trip"); // đã đăng thì bỏ bản nháp
 
-            hopThanhCong.classList.remove("d-none");
-            datTrangThai("");
-            nutDangChuyen.disabled = false;
-            hienThongBao("Đã đăng chuyến thành công");
-
-            // Đưa form về trạng thái ban đầu sau khi đăng thành công
-            form.reset();
-            datMacDinh();
-            capNhatTomTat();
-            capNhatGoiY();
-            hopThanhCong.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 800);
+                // Đưa form về trạng thái ban đầu sau khi đăng thành công
+                form.reset();
+                datMacDinh();
+                capNhatTomTat();
+                capNhatGoiY();
+                hopThanhCong.scrollIntoView({ behavior: "smooth", block: "center" });
+            })
+            .catch(function(loi) {
+                datTrangThai(loi.message, true);
+                hienThongBao("Chưa đăng được chuyến");
+            })
+            .then(function() {
+                nutDangChuyen.disabled = false;
+            });
     });
 
     /* ---------- Đóng thông báo thành công ---------- */
