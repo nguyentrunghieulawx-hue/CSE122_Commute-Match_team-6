@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
         admin: "admin-dashboard"
     };
 
-    /* ---------- Chọn vai trò đăng nhập ---------- */
+    /* ---------- Người dùng đã qua bước kiểm tra email + mật khẩu (MockApi) ---------- */
+    var nguoiDangNhap = null;
+
+    /* ---------- Chọn vai trò đăng nhập: điền sẵn tài khoản demo của vai trò đó ---------- */
     document.getElementById("nhomVaiTro").addEventListener("click", function(e) {
         var nut = e.target.closest("[data-vai-tro]");
         if (!nut) return;
@@ -22,6 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
             o.classList.remove("dang-chon");
         });
         nut.classList.add("dang-chon");
+
+        var demo = window.MockApi && MockApi.taiKhoanDemo(nut.dataset.vaiTro);
+        if (demo) {
+            oEmail.value = demo.email;
+            oMatKhau.value = demo.matKhau;
+        }
     });
 
     /* ========== CÁC PHẦN TỬ TRÊN TRANG ========== */
@@ -129,8 +138,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!oOtpLoi.classList.contains("d-none")) anLoiOtp();
     });
 
-    /* ---------- Bấm nút "Đăng nhập": kiểm tra rồi sang bước nhập mã ---------- */
-    document.querySelector('[data-viec="dang-nhap"]').addEventListener("click", function() {
+    /* ---------- Bấm nút "Đăng nhập": kiểm tra với MockApi rồi sang bước nhập mã ---------- */
+    var nutDangNhap = document.querySelector('[data-viec="dang-nhap"]');
+    nutDangNhap.addEventListener("click", function() {
         if (!oEmail.value.trim()) {
             hienThongBao("Bạn chưa nhập email");
             oEmail.focus();
@@ -142,9 +152,21 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        oEmailNhanMa.textContent = oEmail.value.trim();
-        hienBuocOtp();
-        guiMaOtp();
+        nutDangNhap.disabled = true;
+        MockApi.xacThuc(oEmail.value.trim(), oMatKhau.value)
+            .then(function(nguoiDung) {
+                nguoiDangNhap = nguoiDung;
+                oEmailNhanMa.textContent = nguoiDung.email;
+                hienBuocOtp();
+                guiMaOtp();
+            })
+            .catch(function(loi) {
+                hienThongBao(loi.message);
+                oMatKhau.focus();
+            })
+            .then(function() {
+                nutDangNhap.disabled = false;
+            });
     });
 
     /* ---------- Bấm nút "Gửi lại mã" ---------- */
@@ -173,11 +195,9 @@ document.addEventListener("DOMContentLoaded", function() {
         dungDemNguoc();
         anLoiOtp();
 
-        var nutDangChon = document.querySelector("[data-vai-tro].dang-chon");
-        var vaiTro = nutDangChon ? nutDangChon.dataset.vaiTro : "rider";
-
-        localStorage.setItem("cmRole", vaiTro);
-        hienThongBao("Xác nhận mã thành công, đang đăng nhập...");
+        /* Lưu phiên đăng nhập; vai trò lấy theo tài khoản thật (không theo nút đang chọn) */
+        var vaiTro = MockApi.batDauPhien(nguoiDangNhap).vaiTro;
+        hienThongBao("Xin chào " + nguoiDangNhap.hoTen + ", đang đăng nhập...");
         setTimeout(function() {
             location.href = denTrang(TRANG_CHINH[vaiTro]);
         }, 700);

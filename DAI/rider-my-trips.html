@@ -46,14 +46,16 @@
       </div>
 
       <!-- ===== Dải lọc theo trạng thái ===== -->
-      <div class="dai-tabs">
-        <button class="dai-tab active">Đã duyệt <span class="dai-tag">2</span></button>
-        <button class="dai-tab">Đang chờ</button>
-        <button class="dai-tab">Hoàn thành</button>
-        <button class="dai-tab">Bị từ chối</button>
-        <button class="dai-tab">Đã hủy</button>
+      <div class="dai-tabs" id="mtTabs">
+        <button class="dai-tab active" data-loc="accepted">Đã duyệt <span class="dai-tag">2</span></button>
+        <button class="dai-tab" data-loc="pending">Đang chờ</button>
+        <button class="dai-tab" data-loc="completed">Hoàn thành</button>
+        <button class="dai-tab" data-loc="rejected">Bị từ chối</button>
+        <button class="dai-tab" data-loc="cancelled">Đã hủy</button>
       </div>
 
+      <!-- ===== Danh sách chuyến: rider-my-trips.js lấy từ MockApi và dựng lại ===== -->
+      <div id="mtDanhSach">
       <!-- ===== Chuyến sắp đi ===== -->
       <article class="dai-trip">
         <div class="dai-col-main">
@@ -106,6 +108,7 @@
           <span class="dai-price">30.000đ</span>
         </div>
       </article>
+      </div>
     </main>
 
     <!-- ===== Hộp thoại đánh giá chuyến ===== -->
@@ -116,10 +119,10 @@
           <button class="modal-close" data-close aria-label="Đóng">×</button>
         </div>
         <p>Bạn hài lòng ở mức nào?</p>
-        <div class="dai-sao">★★★★★</div>
-        <textarea class="dai-area" style="margin-top:14px" placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
+        <div class="dai-sao" id="mtSao" style="cursor:pointer" title="Bấm để chọn số sao">★★★★★</div>
+        <textarea class="dai-area" id="mtNhanXet" style="margin-top:14px" placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
         <div class="dai-btn-row">
-          <button class="dai-btn dai-btn-main" data-action="save">Gửi đánh giá</button>
+          <button class="dai-btn dai-btn-main" data-action="rate">Gửi đánh giá</button>
         </div>
       </div>
     </div>
@@ -150,6 +153,7 @@
   <div class="toast" id="toast">Đã cập nhật thành công</div>
 
   <script src="js/duong-dan.js"></script>
+  <script src="../js/mock-api.js"></script>
   <script src="js/rider-my-trips.js"></script>
     <script src="../HIEU/js/theme.js"></script>
 </body>

@@ -39,8 +39,8 @@
       <div class="dai-head">
         <div>
           <div class="dai-kicker">AI Matching</div>
-          <h1>3 chuyến phù hợp</h1>
-          <p class="dai-note">Cầu Giấy → Hòa Lạc · Thứ Hai, 05/10</p>
+          <h1 id="mrTieuDe">3 chuyến phù hợp</h1>
+          <p class="dai-note" id="mrMoTa">Cầu Giấy → Hòa Lạc · Thứ Hai, 05/10</p>
         </div>
         <a class="dai-btn dai-btn-line" href="rider-trip-search.html">Sửa tìm kiếm</a>
       </div>
@@ -81,8 +81,8 @@
         </form>
       </section>
 
-      <!-- ===== Danh sách chuyến gợi ý ===== -->
-      <div class="dai-list-chuyen">
+      <!-- ===== Danh sách chuyến gợi ý: rider-match-results.js lấy từ MockApi và dựng lại ===== -->
+      <div class="dai-list-chuyen" id="mrDanhSach">
 
         <article class="dai-trip">
           <div class="dai-col-main">
@@ -180,7 +180,7 @@
     <div class="modal-backdrop" id="joinModal">
       <div class="modal-box">
         <div class="modal-head">
-          <h2>Gửi yêu cầu tham gia</h2>
+          <h2 id="mrTenChuyen">Gửi yêu cầu tham gia</h2>
           <button class="modal-close" data-close aria-label="Đóng">×</button>
         </div>
 
@@ -211,6 +211,7 @@
   <div class="toast" id="toast">Đã cập nhật thành công</div>
 
   <script src="js/duong-dan.js"></script>
+  <script src="../js/mock-api.js"></script>
   <script src="js/rider-match-results.js"></script>
     <script src="../HIEU/js/theme.js"></script>
 </body>

@@ -1,0 +1,7 @@
+node_modules/
+package-lock.json
+*.log
+# Dữ liệu chạy thử của json-server (tạo lại bằng "npm run reset")
+db.json
+db-*.json
+

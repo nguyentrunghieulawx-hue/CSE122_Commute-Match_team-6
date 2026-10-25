@@ -42,20 +42,20 @@
           <h1>Thông báo</h1>
           <p class="dai-note">Cập nhật mới nhất từ các chuyến và báo cáo.</p>
         </div>
-        <button class="dai-btn dai-btn-line" data-action="save">Đánh dấu tất cả đã đọc</button>
+        <button class="dai-btn dai-btn-line" data-action="read-all">Đánh dấu tất cả đã đọc</button>
       </div>
 
       <!-- ===== Dải lọc ===== -->
-      <div class="dai-tabs">
-        <button class="dai-tab active">Tất cả 6</button>
-        <button class="dai-tab">Chưa đọc 3</button>
-        <button class="dai-tab">Chuyến đi</button>
-        <button class="dai-tab">Hệ thống</button>
+      <div class="dai-tabs" id="tbTabs">
+        <button class="dai-tab active" data-loc="all">Tất cả 6</button>
+        <button class="dai-tab" data-loc="unread">Chưa đọc 3</button>
+        <button class="dai-tab" data-loc="trip">Chuyến đi</button>
+        <button class="dai-tab" data-loc="system">Hệ thống</button>
       </div>
 
-      <!-- ===== Danh sách thông báo ===== -->
+      <!-- ===== Danh sách thông báo: notifications.js lấy từ MockApi và dựng lại ===== -->
       <section class="dai-panel">
-        <div class="dai-list">
+        <div class="dai-list" id="tbDanhSach">
 
           <a class="dai-item moi" href="../HIEU/driver-join-requests.html">
             <span class="dai-face amber">YC</span>
@@ -107,6 +107,7 @@
   <div class="toast" id="toast">Đã cập nhật thành công</div>
 
   <script src="js/duong-dan.js"></script>
+  <script src="../js/mock-api.js"></script>
   <script src="js/notifications.js"></script>
     <script src="../HIEU/js/theme.js"></script>
 </body>

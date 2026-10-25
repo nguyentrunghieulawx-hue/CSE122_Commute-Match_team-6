@@ -63,26 +63,26 @@
             <div class="col-6 col-lg-3">
                 <div class="cm-card cm-stat">
                     <div class="cm-stat-label">Sắp tới</div>
-                    <div class="cm-stat-number">4</div>
+                    <div class="cm-stat-number" id="soSapToi">4</div>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="cm-card cm-stat">
                     <div class="cm-stat-label">Chờ duyệt</div>
-                    <div class="cm-stat-number">3</div>
-                    <div class="cm-stat-note cam">2 yêu cầu mới hôm nay</div>
+                    <div class="cm-stat-number" id="soChoDuyet">3</div>
+                    <div class="cm-stat-note cam" id="ghiChuChoDuyet">2 yêu cầu mới hôm nay</div>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="cm-card cm-stat">
                     <div class="cm-stat-label">Tháng này</div>
-                    <div class="cm-stat-number">12</div>
+                    <div class="cm-stat-number" id="soThangNay">12</div>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="cm-card cm-stat">
                     <div class="cm-stat-label">Đánh giá</div>
-                    <div class="cm-stat-number">4,9</div>
+                    <div class="cm-stat-number" id="soDanhGia">4,9</div>
                     <div class="cm-stat-note">Ổn định so với tháng trước</div>
                 </div>
             </div>
@@ -91,14 +91,15 @@
         <!-- ===== Danh sách chuyến của tháng ===== -->
         <div class="cm-card">
             <div class="cm-card-head">
-                <h2><i class="bi bi-calendar3 me-2"></i>Tháng 10/2026</h2>
+                <h2><i class="bi bi-calendar3 me-2"></i>Chuyến đã đăng</h2>
                 <div class="cm-actions">
                     <button class="btn cm-btn cm-btn-outline btn-sm" data-viec="luu">Dạng lịch</button>
                     <button class="btn cm-btn cm-btn-gradient btn-sm" data-viec="luu">Danh sách</button>
                 </div>
             </div>
 
-            <div class="cm-stack">
+            <!-- Danh sách chuyến: driver-schedule.js lấy từ MockApi và dựng lại -->
+            <div class="cm-stack" id="dsChuyen">
                 <div class="cm-row">
                     <div class="cm-row-main">
                         <span class="cm-badge">Sắp khởi hành</span>
@@ -137,6 +138,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/duong-dan.js"></script>
+    <script src="../js/mock-api.js"></script>
     <script src="js/driver-schedule.js"></script>
     <script src="js/theme.js"></script>
 </body>
