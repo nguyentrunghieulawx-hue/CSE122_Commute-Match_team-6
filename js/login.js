@@ -1,13 +1,3 @@
-/* =====================================================
-   CommuteMatch — Trang "Đăng nhập" (phần JS của HIEU)
-   Chức năng:
-   1. Chọn vai trò đăng nhập (chỉ 1 nút được sáng)
-   2. Bấm Đăng nhập: kiểm tra ô trống rồi "gửi" mã OTP 6 chữ số
-      (chưa có backend nên mã được in thẳng lên màn hình)
-   3. Nhập đúng mã OTP: lưu vai trò rồi mở trang của vai trò đó
-   4. Có đếm ngược 60 giây mới được bấm "Gửi lại mã"
-   ===================================================== */
-
 document.addEventListener("DOMContentLoaded", function() {
 
     /* ---------- Đường dẫn tới các trang khác ---------- */
@@ -47,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var oChuGuiLai = document.getElementById("oChuGuiLai");
 
     /* ---------- Hiện dòng thông báo nhỏ góc phải ---------- */
-    var hopThongBao = document.getElementById("cmToast");
+    var hopThongBao = document.getElementById("cmToast"); /* Thông báo nhỏ  */
 
     function hienThongBao(noiDung) {
         if (!hopThongBao) return;
