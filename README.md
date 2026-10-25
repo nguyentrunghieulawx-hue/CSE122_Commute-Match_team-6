@@ -18,11 +18,10 @@ DAI/
 
 ## Cách chạy
 
-- Khuyến nghị: chạy server tĩnh từ **gốc thư mục này (gốc branch)** (Live Server của VS Code
-  hoặc `npx http-server`) rồi mở `http://localhost:8080/rider-trip-search.html`.
-- Hoặc mở trực tiếp `rider-trip-search.html` bằng trình duyệt. Liên kết chéo sang trang của
-  thành viên khác là đường dẫn tuyệt đối tới bản GitHub Pages của nhánh `main`,
-  nên cần repo đã bật Pages để nhảy chéo giữa các branch.
+- Khuyến nghị: chạy server tĩnh từ **gốc repo CSE122** (Live Server của VS Code
+  hoặc `npx http-server`) rồi mở `http://localhost:8080/DAI/rider-trip-search.html`.
+- Hoặc mở trực tiếp `rider-trip-search.html` bằng trình duyệt; liên kết chéo sang thư mục
+  thành viên khác dùng đường dẫn tương đối `../<THU-MUC>/<trang>.html` nên vẫn hoạt động.
 
 ## Danh sách trang
 
