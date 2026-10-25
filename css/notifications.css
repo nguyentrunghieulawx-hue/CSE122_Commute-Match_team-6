@@ -34,9 +34,9 @@ body {
   font-size: 15px;
   line-height: 1.65;
 }
-h1, h2, h3 { font-family: "Sora", "Inter", sans-serif; line-height: 1.25; margin: 0; }
+h1 { font-family: "Sora", "Inter", sans-serif; line-height: 1.25; margin: 0; }
 a { color: inherit; text-decoration: none; }
-button, input, select, textarea { font: inherit; color: inherit; }
+button { font: inherit; color: inherit; }
 button { cursor: pointer; }
 
 /* ======= KHUNG TRANG (flexbox dọc) ======= */
@@ -74,7 +74,7 @@ button { cursor: pointer; }
   border-bottom: 2px solid transparent;
 }
 .dai-nav .nav-link:hover { color: #fff; }
-.dai-nav .nav-link.active { color: var(--amber); border-bottom-color: var(--amber); }
+
 .dai-tools { display: flex; align-items: center; gap: 8px; }
 .dai-tool {
   width: 38px; height: 38px;
@@ -104,13 +104,6 @@ button { cursor: pointer; }
 .dai-head h1 { font-size: 30px; font-weight: 700; margin: 7px 0 4px; }
 .dai-note { margin: 0; color: var(--ink-soft); font-size: 14px; }
 
-/* ======= HAI CỘT (flexbox ngang) ======= */
-.dai-flex { display: flex; align-items: flex-start; gap: 22px; }
-.dai-col-main { flex: 1 1 auto; min-width: 0; }
-.dai-col-side { flex: 0 0 330px; min-width: 0; }
-.dai-cards { display: flex; flex-wrap: wrap; gap: 18px; }
-.dai-card { flex: 1 1 220px; min-width: 0; }
-
 /* ======= KHỐI TRẮNG ======= */
 .dai-panel {
   background: var(--card);
@@ -119,12 +112,6 @@ button { cursor: pointer; }
   padding: 22px;
   box-shadow: 0 1px 2px rgba(25, 27, 31, .05);
 }
-.dai-panel + .dai-panel { margin-top: 18px; }
-.dai-col-side .dai-panel + .dai-panel { margin-top: 18px; }
-.dai-panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
-.dai-panel h2 { font-size: 17px; font-weight: 700; }
-.dai-panel h3 { font-size: 15px; font-weight: 700; }
-.dai-stack > * + * { margin-top: 18px; }
 
 /* ======= NÚT ======= */
 .dai-btn {
@@ -140,47 +127,11 @@ button { cursor: pointer; }
   font-weight: 600;
   transition: background .15s ease, color .15s ease, border-color .15s ease;
 }
-.dai-btn-main { background: var(--slate); color: #fff; }
-.dai-btn-main:hover { background: #14161A; color: #fff; }
-.dai-btn-amber { background: var(--amber); color: var(--slate); }
-.dai-btn-amber:hover { background: var(--amber-dark); color: #fff; }
+
 .dai-btn-line { background: #fff; border-color: var(--line); color: var(--ink); }
 .dai-btn-line:hover { border-color: var(--amber); color: var(--amber-dark); }
-.dai-btn-soft { background: var(--amber-bg); color: var(--amber-dark); }
-.dai-btn-soft:hover { background: #FAE7C2; color: var(--amber-dark); }
-.dai-btn-bad { background: #FDF0EF; border-color: #F0CFCC; color: var(--red); }
-.dai-btn-bad:hover { background: #F9E1DF; color: var(--red); }
-.dai-btn-sm { min-height: 34px; padding: 0 12px; font-size: 13px; border-radius: 6px; }
-.dai-btn[disabled] { opacity: .5; pointer-events: none; }
-.dai-btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 
-/* ======= Ô NHẬP LIỆU ======= */
-.dai-form { display: flex; flex-wrap: wrap; gap: 16px; }
-.dai-field { flex: 1 1 230px; min-width: 0; }
-.dai-field label {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--ink-soft);
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-}
-.dai-input, .dai-select, .dai-area {
-  width: 100%;
-  min-height: 42px;
-  padding: 9px 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  font-size: 14.5px;
-}
-.dai-area { min-height: 92px; resize: vertical; }
-.dai-input:focus, .dai-select:focus, .dai-area:focus {
-  outline: none;
-  border-color: var(--amber);
-  box-shadow: 0 0 0 3px rgba(227, 154, 28, .16);
-}
+.dai-btn-sm { min-height: 34px; padding: 0 12px; font-size: 13px; border-radius: 6px; }
 
 /* ======= DANH SÁCH DÒNG ======= */
 .dai-list { display: flex; flex-direction: column; }
@@ -200,7 +151,7 @@ button { cursor: pointer; }
 .dai-item-act { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
 
 /* ======= NGƯỜI DÙNG ======= */
-.dai-person { display: flex; align-items: center; gap: 11px; min-width: 0; }
+
 .dai-face {
   flex: 0 0 auto;
   width: 40px; height: 40px;
@@ -227,19 +178,6 @@ button { cursor: pointer; }
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-.dai-tag.green { background: #E4F1EA; color: var(--green); }
-.dai-tag.red { background: #FDF0EF; color: var(--red); }
-.dai-tag.gray { background: #ECEAE5; color: var(--ink-soft); }
-.dai-score {
-  display: inline-flex;
-  padding: 4px 10px;
-  border: 1px solid var(--amber);
-  border-radius: 4px;
-  color: var(--amber-dark);
-  font-size: 12px;
-  font-weight: 700;
-}
-.dai-price { font-family: "Sora", sans-serif; font-size: 19px; font-weight: 700; color: var(--slate); }
 
 /* ======= DẢI TAB ======= */
 .dai-tabs { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
@@ -254,130 +192,6 @@ button { cursor: pointer; }
 }
 .dai-tab:hover { color: var(--ink); }
 .dai-tab.active { color: var(--slate); border-bottom-color: var(--amber); }
-.dai-tab .dai-tag { margin-left: 7px; }
-
-/* ======= THẺ CHUYẾN ĐI ======= */
-.dai-trip {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--amber);
-  border-radius: var(--radius);
-  background: var(--card);
-}
-.dai-trip + .dai-trip { margin-top: 14px; }
-.dai-route { display: flex; align-items: center; gap: 9px; margin: 12px 0 6px; font-family: "Sora", sans-serif; font-size: 16px; font-weight: 700; }
-.dai-route span.dai-mui-ten { color: var(--amber); }
-.dai-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--ink-soft); font-size: 13px; }
-.dai-meta span::before { content: "•"; margin-right: 8px; color: var(--amber); }
-.dai-meta span:first-child::before { content: ""; margin: 0; }
-.dai-side { display: flex; flex-direction: column; align-items: flex-end; gap: 9px; flex: 0 0 auto; }
-
-/* ======= BẢN ĐỒ MINH HOẠ ======= */
-.dai-map {
-  position: relative;
-  height: 280px;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background-color: #EFEDE7;
-  background-image:
-    linear-gradient(rgba(35, 38, 44, .07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(35, 38, 44, .07) 1px, transparent 1px);
-  background-size: 34px 34px, 34px 34px;
-  overflow: hidden;
-}
-.dai-map::after {
-  content: "";
-  position: absolute;
-  left: 22%; top: 30%;
-  width: 56%; height: 40%;
-  border-top: 3px dashed var(--amber);
-  transform: rotate(-8deg);
-}
-.dai-pin {
-  position: absolute;
-  z-index: 2;
-  width: 30px; height: 30px;
-  display: grid; place-items: center;
-  border-radius: 6px;
-  background: var(--slate);
-  color: #fff;
-  font-size: 12px; font-weight: 700;
-}
-.dai-pin-b { background: var(--amber); color: var(--slate); }
-.dai-pin-a { left: 20%; top: 26%; }
-.dai-pin-b { right: 24%; bottom: 26%; }
-
-/* ======= BA Ô SỐ LIỆU NHỎ ======= */
-.dai-mini { display: flex; gap: 14px; margin-top: 18px; }
-.dai-mini div {
-  flex: 1 1 0;
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #FBFAF7;
-}
-.dai-mini span { display: block; color: var(--ink-soft); font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.dai-mini strong { font-family: "Sora", sans-serif; font-size: 16px; }
-
-/* ======= Ô SỐ LIỆU LỚN ======= */
-.dai-stat { border-left: 3px solid var(--amber); padding-left: 14px; }
-.dai-stat span { display: block; color: var(--ink-soft); font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
-.dai-stat strong { font-family: "Sora", sans-serif; font-size: 28px; font-weight: 700; line-height: 1.2; }
-.dai-stat em { display: block; font-style: normal; font-size: 12.5px; color: var(--green); font-weight: 600; }
-
-/* ======= Ô GHI CHÚ ======= */
-.dai-callout {
-  padding: 13px 15px;
-  border-left: 3px solid var(--amber);
-  border-radius: 0 8px 8px 0;
-  background: var(--amber-bg);
-  color: var(--amber-dark);
-  font-size: 13.5px;
-  font-weight: 500;
-}
-.dai-callout.green { border-color: var(--green); background: #E4F1EA; color: #245E45; }
-
-/* ======= CHỌN VAI TRÒ / GIAO DIỆN ======= */
-.dai-picks { display: flex; gap: 10px; margin-top: 14px; }
-.role-option {
-  flex: 1 1 0;
-  min-height: 44px;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  font-size: 14px;
-  font-weight: 600;
-}
-.role-option:hover { border-color: var(--amber); }
-.role-option.selected { border-color: var(--amber); background: var(--amber-bg); color: var(--amber-dark); }
-
-/* ======= TRANG LỖI ======= */
-.dai-empty {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 70px 20px;
-  text-align: center;
-}
-.dai-code {
-  font-family: "Sora", sans-serif;
-  font-size: clamp(74px, 16vw, 132px);
-  font-weight: 800;
-  line-height: 1;
-  color: var(--amber);
-  letter-spacing: -.04em;
-}
-.dai-empty h1 { font-size: 26px; }
-.dai-empty .dai-note { max-width: 460px; }
-.dai-empty .dai-btn-row { justify-content: center; }
 
 /* ======= HỘP THOẠI (tự viết, không dùng thư viện) ======= */
 .modal-backdrop {
@@ -391,29 +205,6 @@ button { cursor: pointer; }
   background: rgba(19, 20, 24, .62);
 }
 .modal-backdrop.open { display: flex; }
-.modal-box {
-  width: min(520px, 100%);
-  max-height: 88vh;
-  overflow: auto;
-  padding: 24px;
-  border-radius: 12px;
-  border-top: 4px solid var(--amber);
-  background: var(--card);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, .28);
-}
-.modal-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
-.modal-head h2 { font-size: 18px; }
-.modal-close {
-  width: 34px; height: 34px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #fff;
-  color: var(--ink-soft);
-  font-size: 18px;
-  line-height: 1;
-}
-.modal-close:hover { border-color: var(--red); color: var(--red); }
-.modal-box p { margin: 0 0 12px; }
 
 /* ======= THÔNG BÁO NHANH ======= */
 .toast {
@@ -436,19 +227,6 @@ button { cursor: pointer; }
 }
 .toast.show { opacity: 1; transform: translateY(0); }
 
-/* ======= Ô TÍCH (checkbox) ======= */
-.dai-item input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--amber); flex: 0 0 auto; }
-
-/* ======= CHÂN TRANG ======= */
-.dai-foot {
-  padding: 22px 28px;
-  border-top: 3px solid var(--amber);
-  background: var(--slate);
-  color: #AEB3BC;
-  font-size: 13px;
-  text-align: center;
-}
-
 /* ======= MÀN HÌNH NHỎ ======= */
 @media (max-width: 980px) {
   .dai-nav {
@@ -467,12 +245,9 @@ button { cursor: pointer; }
   }
   .dai-nav.open { display: flex; }
   .dai-nav .nav-link { border-bottom: 0; border-left: 2px solid transparent; }
-  .dai-nav .nav-link.active { border-left-color: var(--amber); }
+
   .dai-menu { display: grid; }
-  .dai-flex { flex-direction: column; }
-  .dai-col-side { flex: 1 1 auto; width: 100%; }
-  .dai-trip { flex-direction: column; }
-  .dai-side { align-items: flex-start; }
+
 }
 
 @media (max-width: 620px) {
@@ -480,22 +255,17 @@ button { cursor: pointer; }
   .dai-brand span.dai-brand-name { display: none; }
   .dai-main { width: 92vw; padding-top: 24px; }
   .dai-head { flex-direction: column; align-items: flex-start; }
-  .dai-mini { flex-direction: column; }
+
   .dai-item { flex-direction: column; align-items: flex-start; }
   .dai-item-act { width: 100%; justify-content: flex-start; }
-  .dai-picks { flex-direction: column; }
-  .dai-field { flex: 1 1 100%; }
+
   .dai-head h1 { font-size: 24px; }
   .dai-panel { padding: 16px; }
-  .dai-map { height: 210px; }
-  .dai-stat strong { font-size: 24px; }
-  .dai-btn-row .dai-btn { flex: 1 1 100%; }
-  .modal-box { padding: 18px; }
+
   .toast { left: 16px; right: 16px; max-width: none; }
-  .dai-empty { padding: 44px 14px; }
+
 }
 
-/* ======= PHẦN RIÊNG CỦA TRANG NOTIFICATIONS ======= */
 /* Trang thông báo: dòng chưa đọc có viền trái hổ phách */
 .dai-item.moi { border-left: 3px solid var(--amber); padding-left: 12px; margin-left: -12px; }
 .dai-item.moi strong { color: var(--slate); }
