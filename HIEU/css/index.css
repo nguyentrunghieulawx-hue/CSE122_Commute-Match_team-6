@@ -18,8 +18,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: "Baloo 2", "Be Vietnam Pro", sans-serif;
     color: var(--blue-dark);
 }
@@ -119,18 +118,6 @@ a {
     min-height: 42px;
 }
 
-.cm-btn-gradient {
-    background: linear-gradient(100deg, var(--blue), var(--teal));
-    color: #fff;
-    box-shadow: 0 8px 18px rgba(15, 76, 129, .20);
-}
-
-.cm-btn-gradient:hover {
-    color: #fff;
-    filter: brightness(1.06);
-    transform: translateY(-1px);
-}
-
 .cm-btn-outline {
     border-color: #A9C9BC;
     background: #fff;
@@ -142,51 +129,10 @@ a {
     color: var(--blue);
 }
 
-.cm-btn-soft {
-    background: #E9F2FA;
-    color: var(--blue);
-}
-
-.cm-btn-soft:hover {
-    background: #DCEBF7;
-    color: var(--blue);
-}
-
-.cm-btn-danger {
-    background: #FFF0F0;
-    border-color: #EFCACA;
-    color: #C94747;
-}
-
-.cm-btn-danger:hover {
-    background: #FFE4E4;
-    color: #B03A3A;
-}
-
 .cm-btn-light {
     background: #fff;
     color: var(--blue);
     font-weight: 700;
-}
-
-.cm-btn[disabled] {
-    opacity: .5;
-    pointer-events: none;
-}
-
-.btn-sm.cm-btn {
-    padding: .35rem .85rem;
-    min-height: 36px;
-    font-size: 14px;
-}
-
-.cm-page-head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 26px;
 }
 
 .cm-eyebrow {
@@ -204,13 +150,6 @@ a {
     margin-bottom: 10px;
 }
 
-.cm-title {
-    font-size: clamp(26px, 4vw, 38px);
-    font-weight: 800;
-    color: var(--blue);
-    margin: 0 0 6px;
-}
-
 .cm-subtitle {
     color: var(--muted);
     margin: 0;
@@ -225,282 +164,12 @@ a {
     height: 100%;
 }
 
-.cm-card-head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 16px;
-}
-
-.cm-card h2,
-.cm-card h3 {
+.cm-card h2 {
     font-size: 19px;
     font-weight: 700;
     color: var(--blue);
     margin: 0;
 }
-
-.chip {
-    width: 34px;
-    height: 34px;
-    flex: 0 0 auto;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.chip-blue {
-    background: #E5F0FB;
-    color: var(--blue);
-}
-
-.chip-teal {
-    background: #E0F2F3;
-    color: var(--teal);
-}
-
-.chip-orange {
-    background: #FDEBD7;
-    color: var(--orange-dark);
-}
-
-.cm-stat {
-    position: relative;
-    overflow: hidden;
-}
-
-.cm-stat::after {
-    content: "";
-    position: absolute;
-    right: -24px;
-    top: -26px;
-    width: 86px;
-    height: 86px;
-    border-radius: 50%;
-    background: #EAF6F0;
-}
-
-.cm-stat-label {
-    position: relative;
-    color: var(--muted);
-    font-size: 13.5px;
-}
-
-.cm-stat-number {
-    position: relative;
-    font-family: "Baloo 2", sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--blue);
-    line-height: 1.15;
-}
-
-.cm-stat-note {
-    position: relative;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: #13795B;
-}
-
-.cm-stat-note.cam {
-    color: var(--orange-dark);
-}
-
-.cm-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 11px;
-    border-radius: 99px;
-    background: #DFF3EB;
-    color: #12574A;
-    font-size: 12.5px;
-    font-weight: 700;
-}
-
-.cm-badge-orange {
-    background: #FFF0DF;
-    color: #8A4D0F;
-}
-
-.cm-badge-red {
-    background: #FFF0F0;
-    color: #C94747;
-}
-
-.cm-badge-gray {
-    background: #EEF2F0;
-    color: #66736E;
-}
-
-.cm-badge-yellow {
-    background: #FFF6DC;
-    color: #A8670A;
-}
-
-.cm-tabs {
-    display: flex;
-    gap: 7px;
-    padding: 5px;
-    border-radius: 12px;
-    background: #E9F3EF;
-    overflow-x: auto;
-    margin-bottom: 18px;
-}
-
-.cm-tab {
-    border: 0;
-    background: transparent;
-    color: var(--muted);
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 9px;
-    white-space: nowrap;
-    min-height: 40px;
-}
-
-.cm-tab.active {
-    background: #fff;
-    color: var(--blue);
-    box-shadow: 0 3px 12px rgba(13, 47, 38, .08);
-}
-
-.cm-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.cm-row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px 16px;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: #fff;
-}
-
-.cm-row-main {
-    flex: 1;
-    min-width: 0;
-}
-
-.cm-row-main h3 {
-    font-size: 16.5px;
-    font-weight: 700;
-    color: var(--ink);
-}
-
-.cm-row-main p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 13.5px;
-}
-
-.cm-actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 8px;
-}
-
-.cm-person {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    min-width: 0;
-}
-
-.cm-person-avatar {
-    flex: 0 0 auto;
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background: var(--teal);
-    color: #fff;
-    font-weight: 700;
-}
-
-.cm-person-avatar.cm-vang {
-    background: var(--orange);
-}
-
-.cm-form .form-label {
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.cm-form .form-control,
-.cm-form .form-select {
-    border: 1.5px solid var(--line);
-    border-radius: 12px;
-    padding: .6rem .9rem;
-    background: #FBFDFF;
-    min-height: 46px;
-    font-size: 15px;
-}
-
-.cm-form .form-control:focus,
-.cm-form .form-select:focus {
-    border-color: var(--blue);
-    box-shadow: 0 0 0 4px rgba(15, 76, 129, .12);
-}
-
-.cm-check {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 14px;
-    color: var(--muted);
-}
-
-.cm-check input {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--blue);
-}
-
-.cm-note {
-    padding: 15px 17px;
-    border-left: 4px solid var(--teal);
-    border-radius: 0 12px 12px 0;
-    background: #E9F6F1;
-    font-size: 14.5px;
-}
-
-.cm-note-cam {
-    border-color: var(--orange);
-    background: #FFF3E4;
-}
-
-.cm-roles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 9px;
-}
-
-.cm-role {
-    padding: 11px;
-    border: 1.5px solid var(--line);
-    border-radius: 10px;
-    background: #fff;
-    text-align: center;
-    font-weight: 600;
-    color: #41605A;
-}
-
-.cm-role.dang-chon {
-    border-color: var(--teal);
-    background: #E0F2F3;
-    color: var(--blue-dark);
-    font-weight: 700;
-}
-
 
 /* ======= KHU GIỚI THIỆU TRANG CHỦ ======= */
 
@@ -595,139 +264,6 @@ a {
     color: #fff;
 }
 
-.cm-auth {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-}
-
-.cm-auth-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 14px;
-    padding: 8vw;
-    color: #fff;
-    background: linear-gradient(145deg, #0D3F34, #176B57);
-}
-
-.cm-auth-left h1 {
-    color: #fff;
-    font-size: clamp(28px, 3.4vw, 44px);
-    font-weight: 800;
-    max-width: 560px;
-}
-
-.cm-auth-left p {
-    color: #D4E9E1;
-    max-width: 520px;
-}
-
-.cm-auth-right {
-    display: grid;
-    place-items: center;
-    padding: 46px 7vw;
-    background: #F8FCFA;
-}
-
-.cm-auth-card {
-    width: min(470px, 100%);
-}
-
-.cm-auth-card h1 {
-    font-size: 30px;
-    color: var(--blue);
-    font-weight: 800;
-    margin-bottom: 4px;
-}
-
-.cm-auth-footer {
-    margin-top: 22px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 14.5px;
-}
-
-.cm-auth-footer a {
-    color: var(--blue);
-    font-weight: 700;
-}
-
-.cm-map {
-    position: relative;
-    min-height: 320px;
-    border-radius: 18px;
-    overflow: hidden;
-    background: linear-gradient(38deg, transparent 47%, rgba(23, 107, 87, .16) 48%, rgba(23, 107, 87, .16) 50%, transparent 51%), linear-gradient(-28deg, transparent 47%, rgba(23, 107, 87, .12) 48%, rgba(23, 107, 87, .12) 50%, transparent 51%), #E9F3EF;
-}
-
-.cm-map::before,
-.cm-map::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(5px);
-}
-
-.cm-map::before {
-    width: 150px;
-    height: 150px;
-    left: 20%;
-    top: 25%;
-    background: rgba(238, 139, 45, .40);
-}
-
-.cm-map::after {
-    width: 190px;
-    height: 190px;
-    right: 17%;
-    bottom: 12%;
-    background: rgba(31, 128, 105, .36);
-}
-
-.cm-pin {
-    position: absolute;
-    z-index: 2;
-    width: 34px;
-    height: 34px;
-    border-radius: 50% 50% 50% 0;
-    display: grid;
-    place-items: center;
-    color: #fff;
-    background: var(--blue);
-    transform: rotate(-45deg);
-}
-
-.cm-pin span {
-    transform: rotate(45deg);
-    font-weight: 700;
-    font-size: 13px;
-}
-
-.cm-pin-a {
-    left: 24%;
-    top: 34%;
-}
-
-.cm-pin-b {
-    right: 28%;
-    bottom: 28%;
-}
-
-.cm-mini {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 16px;
-}
-
-.cm-mini div span {
-    display: block;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-
 /* ======= GIÁ TIỀN VÀ ĐIỂM AI ======= */
 
 .cm-price {
@@ -735,18 +271,6 @@ a {
     font-size: 22px;
     font-weight: 800;
     color: var(--blue);
-}
-
-.cm-ai {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 11px;
-    border-radius: 9px;
-    background: #E7F6EF;
-    color: #265B49;
-    font-size: 12.5px;
-    font-weight: 700;
 }
 
 .cm-toast {
@@ -765,12 +289,6 @@ a {
     transition: .25s ease;
 }
 
-.cm-toast.cm-toast-hien {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-
 /*CHÂN TRANG*/
 
 .cm-footer {
@@ -781,12 +299,10 @@ a {
     margin-top: 40px;
 }
 
-
 /*MÀN HÌNH NHỎ*/
 
 @media (max-width: 991.98px) {
-    .cm-hero,
-    .cm-auth {
+    .cm-hero {
         grid-template-columns: 1fr;
     }
     .cm-hero {
@@ -794,12 +310,7 @@ a {
         padding: 52px 6vw;
         gap: 30px;
     }
-    .cm-auth-left {
-        display: none;
-    }
-    .cm-mini {
-        grid-template-columns: 1fr 1fr;
-    }
+
 }
 
 @media (max-width: 575.98px) {
@@ -807,34 +318,13 @@ a {
         padding: 18px 15px;
         border-radius: 16px;
     }
-    .cm-row {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    .cm-actions {
-        width: 100%;
-        justify-content: flex-start;
-    }
-    .cm-roles {
-        grid-template-columns: 1fr;
-    }
-    .cm-page-head {
-        align-items: flex-start;
-    }
-    .cm-mini {
-        grid-template-columns: 1fr;
-    }
+
     .cm-toast {
         left: 16px;
         right: 16px;
         max-width: none;
     }
-    .cm-stat-number {
-        font-size: 26px;
-    }
-    .cm-auth-right {
-        padding: 34px 6vw;
-    }
+
     .cm-hero {
         padding: 44px 6vw;
     }
