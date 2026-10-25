@@ -1,11 +1,12 @@
 /* =====================================================
-   Bang duong dan toi toan bo trang cua prototype CommuteMatch,
-   phien ban branch DUC. Trang cua DUC dung duong dan tuong doi;
-   trang cua thanh vien khac tro toi ban GitHub Pages cua nhanh main.
+   Bảng đường dẫn tới toàn bộ trang của prototype CommuteMatch.
+   Prototype chia làm 3 thư mục thành viên: HIEU, DAI, DUC.
+   duongDanTrang("slug") trả về đường dẫn tương đối từ thư mục
+   DUC tới trang tương ứng (kể cả trang của thành viên khác).
    ===================================================== */
 var DUONG_DAN_TRANG = {
-  "403": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/403.html",
-  "404": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/404.html",
+  "403": "../DAI/403.html",
+  "404": "../DAI/404.html",
   "admin-dashboard": "admin-dashboard.html",
   "admin-platform-settings": "admin-platform-settings.html",
   "admin-report-center": "admin-report-center.html",
@@ -16,22 +17,22 @@ var DUONG_DAN_TRANG = {
   "coordinator-pickup-zone-management": "coordinator-pickup-zone-management.html",
   "coordinator-report-center": "coordinator-report-center.html",
   "coordinator-trip-detail": "coordinator-trip-detail.html",
-  "driver-join-requests": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/driver-join-requests.html",
-  "driver-schedule": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/driver-schedule.html",
-  "driver-trip-create": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/driver-trip-create.html",
-  "driver-trip-detail": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/driver-trip-detail.html",
-  "forgot-password": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/forgot-password.html",
-  "index": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/index.html",
-  "login": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/login.html",
-  "notifications": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/notifications.html",
-  "profile": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/profile.html",
-  "register": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/register.html",
-  "reset-password": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/HIEU/reset-password.html",
-  "rider-match-results": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/rider-match-results.html",
-  "rider-my-trips": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/rider-my-trips.html",
-  "rider-trip-detail": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/rider-trip-detail.html",
-  "rider-trip-search": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/rider-trip-search.html",
-  "settings": "https://nguyentrunghieulawx-hue.github.io/CSE122_Commute-Match_team-6/DAI/settings.html",
+  "driver-join-requests": "../HIEU/driver-join-requests.html",
+  "driver-schedule": "../HIEU/driver-schedule.html",
+  "driver-trip-create": "../HIEU/driver-trip-create.html",
+  "driver-trip-detail": "../HIEU/driver-trip-detail.html",
+  "forgot-password": "../HIEU/forgot-password.html",
+  "index": "../HIEU/index.html",
+  "login": "../HIEU/login.html",
+  "notifications": "../DAI/notifications.html",
+  "profile": "../DAI/profile.html",
+  "register": "../HIEU/register.html",
+  "reset-password": "../HIEU/reset-password.html",
+  "rider-match-results": "../DAI/rider-match-results.html",
+  "rider-my-trips": "../DAI/rider-my-trips.html",
+  "rider-trip-detail": "../DAI/rider-trip-detail.html",
+  "rider-trip-search": "../DAI/rider-trip-search.html",
+  "settings": "../DAI/settings.html",
 };
 
 function duongDanTrang(slug) {
