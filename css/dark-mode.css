@@ -1,0 +1,365 @@
+/* =====================================================
+   Dark Mode CSS - Áp dụng cho tất cả các trang
+   Được kích hoạt khi có class .dark-mode trên root
+   ===================================================== */
+
+:root.dark-mode {
+  /* ===== DAI Color Scheme ===== */
+  --ink: #E8E6E1;
+  --ink-soft: #A8ADB8;
+  --paper: #0F1117;
+  --card: #1A1D24;
+  --line: #2B2F38;
+  --slate: #16191F;
+  --slate-2: #1E222B;
+  --amber: #F5A623;
+  --amber-dark: #D4860A;
+  --amber-bg: #2A2210;
+  --green: #4FA877;
+  --red: #D64A4A;
+
+  /* ===== HIEU/Bootstrap Color Scheme ===== */
+  --blue: #4FB3A3;
+  --blue-dark: #2E7A6D;
+  --teal: #5CC5B5;
+  --orange: #F5A623;
+  --orange-dark: #D4860A;
+  --canvas: #0F1117;
+  --muted: #88929D;
+}
+
+/* ===== LIGHT MODE OVERRIDES (default) ===== */
+:root {
+  --ink: #191B1F;
+  --ink-soft: #5C6470;
+  --paper: #F5F3EF;
+  --card: #FFFFFF;
+  --line: #E3E0D9;
+  --slate: #23262C;
+  --slate-2: #2F343C;
+  --amber: #E39A1C;
+  --amber-dark: #A9700B;
+  --amber-bg: #FDF3DF;
+  --green: #2F7D5B;
+  --red: #B8433C;
+
+  --blue: #176B57;
+  --blue-dark: #0D3F34;
+  --teal: #2B8A6E;
+  --orange: #F08A24;
+  --orange-dark: #C96B16;
+  --canvas: #F3FAF7;
+  --muted: #64766F;
+}
+
+/* ===== DARK MODE TRANSITIONS ===== */
+:root.dark-mode,
+:root.dark-mode body,
+:root.dark-mode * {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ===== DARK MODE: Trang DAI (Bootstrap custom) ===== */
+:root.dark-mode .dai-bar {
+  background: var(--slate);
+  border-bottom-color: var(--amber);
+}
+
+:root.dark-mode .dai-bar .nav-link {
+  color: #8A909B;
+}
+
+:root.dark-mode .dai-bar .nav-link:hover {
+  color: #E8E6E1;
+}
+
+:root.dark-mode .dai-bar .nav-link.active {
+  color: var(--amber);
+}
+
+:root.dark-mode .dai-tool {
+  background: var(--slate-2);
+  border-color: #3B4048;
+  color: #E8E6E1;
+}
+
+:root.dark-mode .dai-tool:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+:root.dark-mode .dai-panel {
+  background: var(--card);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+:root.dark-mode .dai-field label {
+  color: var(--ink-soft);
+}
+
+:root.dark-mode .dai-input {
+  background: var(--slate-2);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+:root.dark-mode .dai-input:focus {
+  border-color: var(--amber);
+  background: #252A33;
+}
+
+:root.dark-mode .dai-btn-main {
+  background: var(--amber);
+  color: var(--slate);
+}
+
+:root.dark-mode .dai-btn-main:hover {
+  background: var(--amber-dark);
+}
+
+:root.dark-mode .dai-btn-bad {
+  background: #C94747;
+  color: #fff;
+}
+
+:root.dark-mode .toast {
+  background: var(--slate);
+  color: #E8E6E1;
+  border-left-color: var(--amber);
+}
+
+:root.dark-mode .modal-box {
+  background: var(--card);
+  color: var(--ink);
+}
+
+:root.dark-mode .modal-close {
+  background: var(--slate-2);
+  border-color: var(--line);
+  color: var(--ink-soft);
+}
+
+/* ===== DARK MODE: Trang HIEU (Bootstrap) ===== */
+:root.dark-mode .cm-header {
+  background: rgba(26, 29, 36, 0.94);
+  border-bottom-color: var(--line);
+}
+
+:root.dark-mode .cm-logo-text {
+  color: var(--blue);
+}
+
+:root.dark-mode .cm-logo-text b {
+  color: var(--teal);
+}
+
+:root.dark-mode .cm-nav-link {
+  color: #7A9B8F;
+}
+
+:root.dark-mode .cm-nav-link:hover {
+  background: #1E2A28;
+  color: var(--blue);
+}
+
+:root.dark-mode .cm-nav-link.active {
+  color: #fff;
+}
+
+:root.dark-mode .cm-icon-btn {
+  background: var(--slate-2);
+  border-color: var(--line);
+  color: var(--blue);
+}
+
+:root.dark-mode .cm-icon-btn:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+:root.dark-mode .form-control {
+  background: var(--slate-2);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+:root.dark-mode .form-control:focus {
+  background: #252A33;
+  border-color: var(--blue);
+  color: var(--ink);
+}
+
+:root.dark-mode .form-label {
+  color: var(--ink-soft);
+}
+
+:root.dark-mode .cm-btn-gradient {
+  background: linear-gradient(100deg, var(--blue), var(--teal));
+  color: #fff;
+}
+
+:root.dark-mode .cm-btn-soft {
+  background: #1E2A28;
+  color: var(--blue);
+}
+
+:root.dark-mode .cm-btn-outline {
+  background: var(--slate-2);
+  border-color: var(--line);
+  color: var(--blue);
+}
+
+:root.dark-mode .cm-btn-outline:hover {
+  background: #252A33;
+  color: var(--blue);
+}
+
+:root.dark-mode .cm-auth {
+  background: var(--paper);
+}
+
+:root.dark-mode .cm-auth-left {
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+}
+
+:root.dark-mode .cm-auth-right {
+  background: var(--paper);
+}
+
+:root.dark-mode .cm-auth-card {
+  background: var(--card);
+  color: var(--ink);
+}
+
+:root.dark-mode .cm-subtitle,
+:root.dark-mode p {
+  color: var(--ink-soft);
+}
+
+:root.dark-mode .cm-note {
+  background: #1E2A28;
+  border-left-color: var(--amber);
+  color: var(--ink);
+}
+
+:root.dark-mode .cm-otp-mail {
+  background: #1E2A28;
+  border-color: #2E4D45;
+}
+
+:root.dark-mode .cm-otp-mail strong {
+  color: var(--ink);
+}
+
+:root.dark-mode .cm-otp-mail p {
+  color: var(--ink-soft);
+}
+
+:root.dark-mode .cm-otp-mail-icon {
+  background: #1A3A35;
+}
+
+:root.dark-mode .cm-toast {
+  background: var(--slate);
+  color: #E8E6E1;
+  border-left-color: var(--amber);
+}
+
+/* ===== DARK MODE: Bootstrap Overrides ===== */
+:root.dark-mode .text-white {
+  color: #E8E6E1;
+}
+
+:root.dark-mode .list-unstyled li {
+  color: var(--ink-soft);
+}
+
+:root.dark-mode .bi {
+  color: inherit;
+}
+
+:root.dark-mode body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* ===== DARK MODE: Dark mode toggle button styling ===== */
+[data-action="toggle-dark-mode"] {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.25s ease;
+}
+
+[data-action="toggle-dark-mode"]:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+[data-action="toggle-dark-mode"].dark-mode-active {
+  background: var(--amber);
+  color: var(--slate);
+  border-color: var(--amber);
+}
+
+:root.dark-mode [data-action="toggle-dark-mode"] {
+  background: var(--slate-2);
+  border-color: #3B4048;
+  color: #E8E6E1;
+}
+
+:root.dark-mode [data-action="toggle-dark-mode"]:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+:root.dark-mode [data-action="toggle-dark-mode"].dark-mode-active {
+  background: var(--amber);
+  color: var(--slate);
+}
+
+/* ===== Smooth scrollbar in dark mode ===== */
+:root.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+:root.dark-mode ::-webkit-scrollbar-track {
+  background: var(--slate-2);
+}
+
+:root.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+:root.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #3B4048;
+}
+
+
+:root.dark-mode .dai-list {
+  background: transparent;
+}
+
+:root.dark-mode .dai-item {
+  border-color: var(--line);
+}
+
+:root.dark-mode .dai-item-body strong {
+  color: var(--ink);
+}
+
+:root.dark-mode .dai-item-body p {
+  color: var(--ink-soft);
+}
